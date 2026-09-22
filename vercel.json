@@ -1,7 +1,6 @@
 {
   "version": 2,
-  "buildCommand": "pnpm install && pnpm build",
-  "installCommand": "pnpm install",
   "framework": "nextjs",
-  "rootDirectory": "apps/web"
+  "buildCommand": "pnpm --filter @do-mining/web... run build",
+  "installCommand": "pnpm install --frozen-lockfile"
 }
