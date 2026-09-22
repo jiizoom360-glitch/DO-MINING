@@ -2,6 +2,6 @@
   "version": 2,
   "framework": "nextjs",
   "buildCommand": "cd ../.. && pnpm --filter '!@do-mining/web' run build && cd apps/web && next build",
-  "installCommand": "cd ../.. && pnpm install --frozen-lockfile",
+  "installCommand": "cd ../.. && pnpm install",
   "outputDirectory": ".next"
 }
