@@ -1,0 +1,8 @@
+packages:
+  - 'apps/*'
+  - 'packages/*'
+
+allowBuilds:
+  pnpm: set this to true or false
+  sharp: true
+  unrs-resolver: true

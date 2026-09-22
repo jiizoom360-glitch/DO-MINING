@@ -1,0 +1,13 @@
+node_modules/
+build/
+dist/
+.next/
+coverage/
+.DS_Store
+*.log
+.env*
+!.env.example
+*.tsbuildinfo
+.pnpm-debug.log*
+.antigravity/
+*_output.txt

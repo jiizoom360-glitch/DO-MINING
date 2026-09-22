@@ -1,0 +1,23 @@
+{
+  "name": "do-mining",
+  "version": "0.1.0",
+  "private": true,
+  "packageManager": "pnpm@12.4.1",
+  "scripts": {
+    "dev": "pnpm --filter @do-mining/web dev",
+    "build": "NODE_ENV=production pnpm -r run build",
+    "lint": "pnpm -r run lint",
+    "typecheck": "pnpm -r run typecheck",
+    "test": "pnpm -r run test && node --test tests/monorepo.test.mjs && node --test tests/provider-contracts.test.mjs && node --test tests/foundation-contract.test.mjs",
+    "start": "pnpm --filter @do-mining/web start",
+    "db:start": "supabase start",
+    "db:stop": "supabase stop",
+    "db:reset": "supabase db reset",
+    "db:status": "supabase status"
+  },
+  "devDependencies": {
+    "@types/node": "^22.14.0",
+    "supabase": "^2.117.0",
+    "typescript": "~5.8.2"
+  }
+}

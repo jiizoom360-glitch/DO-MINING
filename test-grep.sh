@@ -1,0 +1,11 @@
+echo "Checking fetch usages..."
+grep -rn "fetch(" packages/core packages/ui packages/config packages/contracts packages/mocks apps/web/app || echo "No fetch found"
+echo ""
+echo "Checking specific forbidden SDKs (jitsi, stripe, cloudflare, supabase)..."
+grep -rn "jitsi" packages/ apps/web/app || echo "No jitsi found"
+grep -rn "stripe" packages/ apps/web/app || echo "No stripe found"
+grep -rn "cloudflare" packages/ apps/web/app || echo "No cloudflare found"
+grep -rn "supabase" packages/ apps/web/app || echo "No supabase found"
+echo ""
+echo "Checking typescript strictness..."
+cat package.json | grep -i typecheck
